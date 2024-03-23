@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add and Remove with Prompt</title>
+</head>
+<body>
+
+<!-- "+" tugmasi -->
+<button onclick="addData()">Add</button>
+
+<!-- "Remove" tugmasi -->
+<button onclick="removeData()">Remove</button>
+
+<!-- Ma'lumotni ko'rsatadigan "h1" tegi -->
+<h1 id="dataDisplay"></h1>
+
+<script>
+  function addData() {
+    // Prompt orqali ma'lumot so'rang
+    var newData = prompt("Yangi ma'lumotni kiriting:", "Example");
+
+    // Agar foydalanuvchi cancel bosha qo'ysa yoki hech nima kiritmagan bo'lsa
+    if (newData === null || newData === "") {
+      alert("Ma'lumot kiritilmadi.");
+      return;
+    }
+
+    // "h1" elementini yaratish va ma'lumotni joylash
+    var dataElement = document.getElementById("dataDisplay");
+    dataElement.innerHTML = newData;
+  }
+
+  function removeData() {
+    // "h1" elementini topish
+    var dataElement = document.getElementById("dataDisplay");
+
+    // Agar element topilsa uni o'chirish
+    if (dataElement) {
+      dataElement.parentNode.removeChild(dataElement);
+    }
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button{
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 20px;
+    background-color: lightblue;
+    padding: 7px 20px;
+    
+}
+button:hover {
+    opacity: 0.8;
+}
+button:active {
+    scale: 0.9;
+}
+
+
